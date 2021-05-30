@@ -1,4 +1,4 @@
-## MIT License
+**MIT License**
 
 Copyright (c) 2021 Airshift Media Systems
 
@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## License for the Jansson JSON Library that is partially used to power the Einhugur JSON plugin:
+**License for the Jansson JSON Library that is partially used to power the Einhugur JSON plugin:**
 
 Copyright (c) 2009-2018 Petri Lehtinen
 
