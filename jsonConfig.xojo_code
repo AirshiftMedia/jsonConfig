@@ -75,8 +75,11 @@ Protected Class jsonConfig
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function init() As Boolean
+		Function init(CopyrightFolder as Boolean, GlobalConfig as Boolean) As Boolean
 		  // do initial tasks, run once
+		  
+		  isCopyright = CopyrightFolder
+		  isGlobal = GlobalConfig
 		  
 		  Do
 		  loop until getPath
@@ -126,15 +129,16 @@ Protected Class jsonConfig
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		values As Dictionary
+		isCopyright As Boolean
 	#tag EndProperty
 
+	#tag Property, Flags = &h0
+		isGlobal As Boolean
+	#tag EndProperty
 
-	#tag Constant, Name = isCopyright, Type = Boolean, Dynamic = False, Default = \"TRUE", Scope = Public
-	#tag EndConstant
-
-	#tag Constant, Name = isGlobal, Type = Boolean, Dynamic = False, Default = \"FALSE", Scope = Public
-	#tag EndConstant
+	#tag Property, Flags = &h0
+		values As Dictionary
+	#tag EndProperty
 
 
 	#tag ViewBehavior
@@ -179,11 +183,19 @@ Protected Class jsonConfig
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="values"
+			Name="configPath"
 			Visible=false
 			Group="Behavior"
 			InitialValue=""
-			Type="Integer"
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="folderPath"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

@@ -7,7 +7,7 @@ Inherits Application
 		  
 		  Do
 		    
-		  Loop Until myConfig.init
+		  Loop Until myConfig.init(TRUE,FALSE)
 		End Sub
 	#tag EndEvent
 
@@ -33,14 +33,6 @@ Inherits Application
 
 
 	#tag ViewBehavior
-		#tag ViewProperty
-			Name="myConfig"
-			Visible=false
-			Group="Behavior"
-			InitialValue=""
-			Type="Integer"
-			EditorType=""
-		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
 #tag EndClass
